@@ -841,6 +841,44 @@ h2.grad-text,
   margin-top: 34px;
 }
 
+.hq-section {
+  margin-top: 100px;
+}
+
+.hq-photo {
+  max-width: 780px;
+  margin: 0 auto;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(253, 224, 71, 0.35);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5), 0 0 50px rgba(250, 204, 21, 0.15);
+  position: relative;
+}
+
+.hq-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hq-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 26px 24px 20px;
+  background: linear-gradient(transparent, rgba(4, 6, 12, 0.92));
+  color: var(--text);
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.hq-caption span {
+  color: var(--sky);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
 .office {
   background: var(--panel);
   border: 1px solid var(--border);
@@ -862,6 +900,109 @@ h2.grad-text,
 .office span {
   color: var(--muted);
   font-size: 0.92rem;
+}
+
+/* ---------- Services ---------- */
+.service-card {
+  background: var(--panel);
+  border-radius: 22px;
+  padding: 36px 30px;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  border: 1px solid rgba(253, 224, 71, 0.18);
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: linear-gradient(135deg, rgba(253, 224, 71, 0.7), transparent 35%, transparent 65%, rgba(56, 189, 248, 0.7));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.55;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(250, 204, 21, 0.18),
+    0 0 60px rgba(56, 189, 248, 0.1);
+}
+
+.service-icon {
+  width: 68px;
+  height: 68px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  font-size: 1.9rem;
+  margin-bottom: 24px;
+  background: var(--grad);
+  color: #0b1220;
+  position: relative;
+  box-shadow: 0 0 22px rgba(250, 204, 21, 0.45), 0 0 44px rgba(56, 189, 248, 0.3);
+  transition: box-shadow 0.35s ease, transform 0.35s ease;
+}
+
+.service-card:hover .service-icon {
+  box-shadow: 0 0 30px rgba(250, 204, 21, 0.65), 0 0 60px rgba(56, 189, 248, 0.45);
+  transform: scale(1.06);
+}
+
+.service-card h3 {
+  font-size: 1.22rem;
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  color: var(--muted);
+  font-size: 0.93rem;
+  line-height: 1.65;
+  margin-bottom: 18px;
+}
+
+.service-card ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(125, 211, 252, 0.14);
+}
+
+.service-card ul li {
+  color: var(--muted);
+  font-size: 0.88rem;
+  padding-left: 22px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.service-card ul li::before {
+  content: "\2713";
+  position: static;
+  width: 20px;
+  height: 20px;
+  flex: none;
+  display: grid;
+  place-items: center;
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: #0b1220;
+  background: var(--grad);
+  border-radius: 50%;
 }
 
 /* ---------- Contact ---------- */

@@ -85,6 +85,26 @@ export default function About() {
             </motion.h2>
           </div>
 
+          <motion.div
+            className="hq-section"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.7 }}
+          >
+            <div className="hq-photo">
+              <img
+                src={`${import.meta.env.BASE_URL}headquarters.png`}
+                alt={a.hqTitle || "FIKRADO Security Headquarters"}
+              />
+              <div className="hq-caption">
+                {a.hqTitle || "FIKRADO Security Headquarters"}
+                <br />
+                <span>{a.hqCaption || ""}</span>
+              </div>
+            </div>
+          </motion.div>
+
           <div className="offices-grid">
             {a.offices.map((o, i) => (
               <motion.div

@@ -105,14 +105,14 @@ export default function Home() {
           <div className="cards">
             {t.services.services.slice(0, 3).map((s, i) => (
               <motion.div
-                className="card"
+                className="service-card"
                 key={s.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
               >
-                <div className="card-icon">{s.icon}</div>
+                <div className="service-icon">{s.icon}</div>
                 <h3>{s.title}</h3>
                 <p>{s.desc}</p>
               </motion.div>

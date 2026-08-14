@@ -94,6 +94,8 @@ export const translations = {
         },
       ],
       officesTitle: "Our Offices",
+      hqTitle: "Our Headquarters",
+      hqCaption: "Where our team protects the digital future of the Horn of Africa.",
       offices: [
         { city: "Hargeisa", detail: "Masala, Hargeisa, Somaliland" },
         { city: "Jijiga", detail: "10th Kabele, Jijiga, Ethiopia" },
@@ -431,6 +433,8 @@ export const translations = {
         },
       ],
       officesTitle: "Xafiisyadayada",
+      hqTitle: "Xaruntayada",
+      hqCaption: "Halkaas oo kooxdayadu ay ku ilaalinayaan mustaqbalka dhijitaalka ee Geeska Afrika.",
       offices: [
         { city: "Hargeysa", detail: "Masala, Hargeysa, Somaliland" },
         { city: "Jijiga", detail: "Kabele 10aad, Jijiga, Itoobiya" },
@@ -768,6 +772,8 @@ export const translations = {
         },
       ],
       officesTitle: "\u1263\u12dd\u12ce\u1295\u12ce\u12ce\u1295",
+      hqTitle: "\u12e8\u1295\u1295 \u12e9\u12a0\u12ce\u12e8\u12f5",
+      hqCaption: "\u1275\u12cd\u12ce\u1295\u12ce\u12ce\u1295\u12ce \u12e8\u12a0\u12f0\u1275\u1320\u1208\u1295 \u1218\u1305\u12ad\u1322\u12ce\u1295 \u12e8\u12cd\u12e8\u1295\u12ce\u12ce\u12ce\u1295 \u1275\u12cd\u12ce\u1295\u12ce\u12ce\u1295\u12ce \u12a0\u12ce\u12ce\u12f3\u12ce\u12ce\u12ce\u1295\u1295.",
       offices: [
         { city: "\u12f5\u122d\u130d\u12a5\u1235\u12ce", detail: "\u121b\u1235\u1205\u12ce, \u12f5\u122d\u130d\u12a5\u1235\u12ce, \u1230\u1218\u1205\u12ce\u1295\u12ce" },
         { city: "\u1300\u1300\u130d\u12ce", detail: "10\u129b \u12ab\u1263\u1205, \u1300\u1300\u130d\u12ce, \u12a5\u1275\u12ee\u1353\u12ce\u12ce" },

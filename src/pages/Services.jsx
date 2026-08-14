@@ -21,14 +21,14 @@ export default function Services() {
           <div className="cards">
             {s.services.map((svc, i) => (
               <motion.div
-                className="card"
+                className="service-card"
                 key={svc.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.6, delay: (i % 3) * 0.1 }}
               >
-                <div className="card-icon">{svc.icon}</div>
+                <div className="service-icon">{svc.icon}</div>
                 <h3>{svc.title}</h3>
                 <p>{svc.desc}</p>
                 <ul>
