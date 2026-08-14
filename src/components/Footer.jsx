@@ -1,12 +1,45 @@
-const links = [
-  { label: "Home", href: "#home" },
-  { label: "Services", href: "#services" },
-  { label: "Books", href: "#books" },
-  { label: "Contact", href: "#contact" },
-];
+import { Link } from "react-router-dom";
+import { useLanguage } from "../i18n/LanguageContext.jsx";
+import Logo from "./Logo.jsx";
 
 export default function Footer() {
+  const { t, lang } = useLanguage();
   const year = new Date().getFullYear();
+
+  const links = [
+    { label: t.nav.home, to: "/" },
+    { label: t.nav.about, to: "/about" },
+    { label: t.nav.services, to: "/services" },
+    { label: t.nav.courses, to: "/courses" },
+    { label: t.nav.books, to: "/books" },
+    { label: t.nav.videos, to: "/videos" },
+    { label: t.nav.contact, to: "/contact" },
+  ];
+
+  const contactLines =
+    lang === "am"
+      ? [
+          "fikrado1@gmail.com",
+          "+252 63 4048063",
+          "+251 984858498",
+          "ማስላ፣ ሐርጌሳ፣ ሶማሊላንድ",
+          "10ኛ ካበለ፣ ጅጅጋ፣ ኢትዮጵያ",
+        ]
+      : lang === "so"
+        ? [
+            "fikrado1@gmail.com",
+            "+252 63 4048063",
+            "+251 984858498",
+            "Masala, Hargeysa, Somaliland",
+            "Kabele 10aad, Jijiga, Itoobiya",
+          ]
+        : [
+            "fikrado1@gmail.com",
+            "+252 63 4048063",
+            "+251 984858498",
+            "Masala, Hargeisa, Somaliland",
+            "10th Kabele, Jijiga, Ethiopia",
+          ];
 
   return (
     <footer className="footer">
@@ -14,49 +47,37 @@ export default function Footer() {
         <div className="footer-grid">
           <div>
             <div className="brand" style={{ marginBottom: 16 }}>
-              <img
-                src="/FIKRADO-Security/logo.jpg"
-                alt="FIKRADO Security logo"
-                style={{ width: 40, height: 40, borderRadius: 10 }}
-              />
+              <Logo size={40} />
               <span className="brand-name">
                 FIKRADO <span>Security</span>
               </span>
             </div>
-            <p>
-              A non-profit company specializing in cybersecurity and technology
-              courses. We provide high-quality security solutions and make
-              security education accessible to everyone.
-            </p>
+            <p>{t.footer.tagline}</p>
           </div>
 
           <div>
-            <h4>Quick Links</h4>
+            <h4>{t.footer.quickLinks}</h4>
             <ul className="footer-links">
               {links.map((l) => (
-                <li key={l.label}>
-                  <a href={l.href}>{l.label}</a>
+                <li key={l.to}>
+                  <Link to={l.to}>{l.label}</Link>
                 </li>
               ))}
             </ul>
           </div>
 
           <div>
-            <h4>Contact Us</h4>
-            <p>fikrado1@gmail.com</p>
-            <p>+252 63 4048063</p>
-            <p>+251 984858498</p>
-            <p>Masala, Hargeisa, Somaliland</p>
-            <p>10th Kabele, Jijiga, Ethiopia</p>
+            <h4>{t.footer.contactUs}</h4>
+            {contactLines.map((c, i) => (
+              <p key={i}>{c}</p>
+            ))}
           </div>
         </div>
 
         <div className="footer-bottom">
+          <span>&copy; {year} FIKRADO Security. {t.footer.rights}</span>
           <span>
-            &copy; {year} FIKRADO Security. All rights reserved.
-          </span>
-          <span>
-            Built with <a href="https://react.dev">React</a> +{" "}
+            {t.footer.builtWith} <a href="https://react.dev">React</a> +{" "}
             <a href="https://threejs.org">Three.js</a>
           </span>
         </div>

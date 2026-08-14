@@ -1,6 +1,15 @@
 # FIKRADO Security
 
-A 3D animated website for FIKRADO Security — a non-profit company specializing in cybersecurity and technology courses. Built with **React 19 + Vite + React Three Fiber + Framer Motion**.
+A 3D animated multi-page website for FIKRADO Security — a non-profit specializing in cybersecurity and technology courses. Built with **React 19 + Vite + React Router + React Three Fiber + Framer Motion**.
+
+## Features
+
+- **Multi-page site**: Home, About, Services, Courses, Books, Videos, Contact
+- **3D on every page**: React Three Fiber scenes with rotating wireframe objects, orbit rings, stars, and particle rain — each page has its own 3D layout
+- **Hacker theme**: animated cyber grid background, matrix rain particles, dark neon styling
+- **Language detection**: automatically detects the visitor's language (English, Somali, Amharic) via `navigator.language`, with a manual EN/SO/AM switcher in the navbar
+- **Yellow + light-blue gradient** branding
+- Fully responsive with a mobile menu
 
 ## Run locally
 
@@ -25,6 +34,7 @@ The site will be live at `https://<your-username>.github.io/FIKRADO-Security/`.
 
 ## Project structure
 
-- `src/components/Scene3D.jsx` — 3D shield, orbital rings, and particle scene
-- `src/components/` — Navbar, Hero, Services, Books, Contact, Footer
+- `src/pages/` — Home, About, Services, Courses, Books, Videos, Contact
+- `src/components/` — Layout, Navbar, Footer, PageHero, Scene3D
+- `src/i18n/` — translations (EN/SO/AM) + LanguageContext
 - `public/logo.jpg` — company logo
