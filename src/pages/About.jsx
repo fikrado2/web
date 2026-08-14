@@ -38,6 +38,26 @@ export default function About() {
             </div>
           </motion.div>
 
+          <motion.div
+            className="hq-section"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.7, delay: 0.15 }}
+          >
+            <div className="hq-photo">
+              <img
+                src={`${import.meta.env.BASE_URL}team.png`}
+                alt={a.teamTitle || "FIKRADO Security Team"}
+              />
+              <div className="hq-caption">
+                {a.teamTitle || "FIKRADO Security Team"}
+                <br />
+                <span>{a.teamCaption || ""}</span>
+              </div>
+            </div>
+          </motion.div>
+
           <div className="section-head" style={{ marginTop: 90 }}>
             <motion.span
               className="eyebrow"
